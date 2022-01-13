@@ -3,19 +3,21 @@ import math
 
 INF = 10000000000
 
-def f(x):
-    return math.exp(-x * x / 2) / math.sqrt(2 * math.pi)
-
 print("Enter the x range of the graph")
 displayXRange = float(input())
 print("Enter the y range of the graph")
 displayYRange = float(input())
 print("Enter the resolution of the graph")
 res = int(input())
+print("f(x)= ?")
+strInput = input()
+
+def f(x):
+    return eval(strInput)
 
 im = Image.new('RGB', (res+1,res+1), (255,255,255))
 draw = ImageDraw.Draw(im)
-lineWidth = math.ceil(res / 1000)
+lineWidth = math.ceil(res / 500)
 
 fx = []
 
