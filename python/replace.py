@@ -1,4 +1,4 @@
 import re
-s = input()
-strInput = re.sub(r'(?=sin|cos|tan|exp)', 'math.', s).sub(r'\^', '**', s)
-print(strInput)
+strInput1 = input()
+strInput1 = re.sub(r'(?=pi|sin|cos|tan|exp|floor)', 'math.', strInput1)
+print(strInput1)
