@@ -4,34 +4,6 @@ import re
 
 INF = 1000000000
 
-
-# function definition
-def sqrt(x):
-    if x >= 0:
-        return math.sqrt(x)
-    else:
-        return INF
-def pow(x, y):
-    if x > 0:
-        return math.pow(x, y)
-    elif x == 0:
-        return 0
-    else:
-        return INF
-def log(x, a):
-    if x > 0 and a > 0 and a != 1:
-        return math.log(x, a)
-    else:
-        return INF
-def ln(x):
-    return log(x, math.e)
-def gamma(x):
-    if x.is_integer() and x <= 0:
-        return INF
-    else:
-        return math.gamma(x)
-
-
 # input data
 print("Enter the x range of the graph")
 displayXRange = float(input()) * 2
@@ -48,11 +20,11 @@ strInput3 = input()
 
 
 # string conversion
-strInput1 = re.sub(r'(?=pi|sin|cos|tan|exp|floor)', 'math.', strInput1)
+strInput1 = re.sub(r'(?=pi|sin|cos|tan|exp|floor|sqrt|pow|log|gamma)', 'math.', strInput1)
 strInput1 = re.sub(r'\^', '**', strInput1)
-strInput2 = re.sub(r'(?=pi|sin|cos|tan|exp|floor)', 'math.', strInput2)
+strInput2 = re.sub(r'(?=pi|sin|cos|tan|exp|floor|sqrt|pow|log|gamma)', 'math.', strInput2)
 strInput2 = re.sub(r'\^', '**', strInput2)
-strInput3 = re.sub(r'(?=pi|sin|cos|tan|exp|floor)', 'math.', strInput3)
+strInput3 = re.sub(r'(?=pi|sin|cos|tan|exp|floor|sqrt|pow|log|gamma)', 'math.', strInput3)
 strInput3 = re.sub(r'\^', '**', strInput3)
 
 
